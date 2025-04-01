@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    margin: 0 auto;
+}
+
+.search-box {
+    width: 230px;
+    border: 1px solid rgb(237, 228, 228);
+    display: flex;
+    justify-content: flex-start;
+    background: white;
+}
+
+.search-box button {
+    display: flex;
+    position: relative;
+    left: 140px;
+    border: none;
+    padding: 10px;
+    font-size: 13px;
+    background-color: white;
+}
+
+.search-box p{
+    position: relative;
+    right: 140px;
+    color: rgb(220, 213, 213);
+}
+
+.search-box{
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.menu{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.dropdown{
+    width: 240px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    left: 10px;
+    border: none;
+}
+
+.dropdown input{
+    display: none;
+}
+
+.dropdown label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown span{
+    margin-left: 50px;
+}
+
+.dropdown-menu{
+    display: none;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 10px;
+    border: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    color: rgb(210, 201, 201);
+}
+
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.size-options div {
+    padding: 8px 12px;
+    background: #f4f4f4;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tags div {
+    padding: 5px 10px;
+    background: #f4f4f4;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.dropdown input:checked + label + .dropdown-menu {
+    display: block;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    top: 40px;
+    left: 100px;
+}
+
+.card_text{
+    display: flex;
+    gap: 530px;
+    margin-bottom: 25px;
+}
+
+.card{
+    width: 30%;
+    background: white;
+    margin: 1.5%;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.image{
+    border: 1px solid rgb(238, 232, 232);
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(255, 247, 247);
+}
+
+.image img{
+    width: 100%;
+    height: 25vh;
+}
+
+.sale-badge{ 
+    position: absolute;
+    top: 25px;
+    left: 16px;
+    background: black;
+    color: white;
+    font-size: 12px;
+    padding: 5px 8px;
+}
+
+.card_content{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}

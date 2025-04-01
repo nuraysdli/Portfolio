@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.basliq{
+    height: 200px;
+    background-color: orange;
+}
+
+.basliq p{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 50px;
+    padding: 70px;
+}
+
+.orta{
+    display: flex;
+    height: 100px;
+    background-color: yellow;
+    font-family: "Roboto", sans-serif;
+    padding: 3px;
+}
+
+.yazi1{
+    padding-right: 15px;
+    padding-left: 2px;
+}
+
+.end{
+    display: flex;
+    gap: 15px;
+    margin: 15px auto;
+}
+
+.box{
+    height: 150px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    border: 2px solid black;
+    padding: 2px 2px 8px 2px;
+}

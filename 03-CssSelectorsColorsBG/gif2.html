@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şəkil və Mətn</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 80%;
+    }
+
+    .box {
+      width: 30%;
+      height: 300px; 
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: scroll; 
+      padding: 10px;
+    }
+
+    .text {
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .box h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .box p {
+      margin: 10px 0 0;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="image-container">
+        <img src="./assets/img/amber-kipp-75715CVEJhI-unsplash.jpg" alt="Image" class="image">
+      </div>
+      <div class="text-container">
+        <div class="text">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum esse veritatis obcaecati explicabo modi, optio debitis dolores laboriosam, itaque consequatur eos dolore vitae libero facilis non. Vero fuga animi quam minima quia. Magni eos hic beatae ut nulla tempore natus veritatis nisi, commodi sunt accusamus nihil doloribus sed nesciunt ullam quas illo! Expedita sint magni earum unde! Aspernatur sequi aliquam debitis reiciendis, enim porro laudantium adipisci esse provident beatae earum? Asperiores quasi, illum blanditiis omnis quis non quas in vitae consequatur culpa dolore saepe facilis, officia debitis, veritatis repudiandae? Deleniti doloribus repellendus ad explicabo provident nam omnis incidunt atque animi.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image-container">
+        <img src="./assets/img/arnaud-girault-BVDpC8gBHtY-unsplash.jpg" alt="Image" class="image">
+      </div>
+      <div class="text-container">
+        <div class="text">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, cupiditate? Molestias, nisi temporibus enim dicta suscipit, repudiandae nemo cum eligendi necessitatibus aspernatur asperiores exercitationem perferendis ratione molestiae, tempora quaerat maiores accusantium fugiat. Illo unde, quasi a totam ratione assumenda sunt, nesciunt modi repellat dicta facilis eius reiciendis doloribus numquam et fugit rem obcaecati commodi! Voluptate velit molestias dolorum aperiam iusto eaque obcaecati ad ducimus, porro laudantium id, ratione eveniet. Delectus eum, obcaecati tempora eius placeat voluptates asperiores ut nulla suscipit nihil quisquam, quidem reprehenderit? Dignissimos, temporibus. Laudantium fuga modi laboriosam iste, magni natus facere sed, atque odit omnis exercitationem quae.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image-container">
+        <img src="./assets/img/jason-leung-Jm9HE8Tfwc8-unsplash.jpg" alt="Image" class="image">
+      </div>
+      <div class="text-container">
+        <div class="text">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate tenetur ea rerum! Fugit minus consequatur voluptatibus quae impedit nesciunt architecto soluta porro fugiat distinctio dolor, voluptates assumenda minima. Ab rerum, animi inventore quibusdam veritatis modi suscipit quisquam, quaerat iure, ducimus recusandae reiciendis voluptatibus cum sequi! Expedita ipsam quas maiores veritatis commodi nemo optio itaque? Error illum quo cumque voluptate facilis doloremque ducimus? Optio expedita similique autem ab, voluptatibus deleniti quae iusto excepturi. Expedita est, earum illum eaque ad blanditiis provident vitae laudantium commodi ipsum. Dolor, facere tempore obcaecati voluptates tenetur culpa eveniet quisquam quasi nostrum, dignissimos expedita officia consequuntur sapiente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

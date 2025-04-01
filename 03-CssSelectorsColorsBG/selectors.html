@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Nümunəsi</title>
+    <style>
+        /* 1. ID selector */
+        #basliq {
+            color: blue;
+        }
+        
+        /* 2. Class selector */
+        .metn {
+            font-size: 18px;
+        }
+        
+        /* 3. Element selector */
+        p {
+            line-height: 1.5;
+        }
+        
+        /* 4. Descendant selector */
+        .qutu p {
+            color: red;
+        }
+        
+        /* 5. Child selector */
+        .qutu > p {
+            font-weight: bold;
+        }
+        
+        /* 6. Adjacent sibling selector */
+        h1 + p {
+            text-decoration: underline;
+        }
+        
+        /* 7. General sibling selector */
+        h1 ~ ul {
+            background-color: lightgray;
+        }
+        
+        /* 8. Attribute selector */
+        a[href] {
+            color: green;
+        }
+        
+        /* 9. Attribute selector (specific value) */
+        a[href="#"] {
+            text-decoration: none;
+        }
+        
+        /* 10. First child selector */
+        li:first-child {
+            font-style: italic;
+        }
+        
+        /* 11. Last child selector */
+        li:last-child {
+            font-weight: bold;
+        }
+        
+        /* 12. Nth-child selector */
+        li:nth-child(2) {
+            color: purple;
+        }
+        
+        /* 13. Nth-of-type selector */
+        p:nth-of-type(1) {
+            background-color: yellow;
+        }
+        
+        /* 14. Only-child selector */
+        .qutu p:only-child {
+            border: 1px solid black;
+        }
+        
+        /* 15. Only-of-type selector */
+        .qutu p:only-of-type {
+            padding: 10px;
+        }
+        
+        /* 16. Hover pseudo-class */
+        a:hover {
+            color: orange;
+        }
+        
+        /* 17. Active pseudo-class */
+        a:active {
+            color: red;
+        }
+        
+        /* 18. Focus pseudo-class */
+        input:focus {
+            border-color: blue;
+        }
+        
+        /* 19. Before pseudo-element */
+        h1::before {
+            content: "\2728 ";
+        }
+        
+        /* 20. After pseudo-element */
+        h1::after {
+            content: " \2728";
+        }
+    </style>
+</head>
+<body>
+    <h1 id="basliq">Lorem, ipsum.</h1>
+    <p class="metn">Lorem ipsum dolor sit.</p>
+    <div class="qutu">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <a href="#" class="link">Lorem, ipsum.</a>
+    </div>
+    <ul>
+        <li>Lorem, ipsum.</li>
+        <li>Lorem, ipsum.</li>
+        <li>Lorem, ipsum.</li>
+    </ul>
+</body>
+</html>

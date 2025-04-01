@@ -1,0 +1,402 @@
+@import "_reset.scss";
+@import "_variables.scss";
+
+@mixin center1 {
+  display: flex;
+  align-items: center;
+}
+
+@mixin center2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.more-btn {
+  width: 80px;
+  height: 40px;
+  background-color: $myColor;
+  color: white;
+  border: none;
+}
+
+#header {
+  color: #d4e0ef;
+  height: 3.25em;
+  left: 0;
+  line-height: 3.25em;
+  position: absolute;
+  text-align: right;
+  top: 4em;
+  width: 100%;
+  z-index: 10001;
+  .header {
+    @include center1();
+    justify-content: space-between;
+    .burger {
+      display: none;
+    }
+    .logo {
+      font-size: $myFontSize;
+    }
+    .nav_list ul {
+      @include center1();
+      gap: 20px;
+      font-size: 11.7px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    .header {
+      .nav_list {
+        display: none;
+      }
+      .burger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .nav_list.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3.25em;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+
+#header_end {
+  background-image: url(img/banner.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 400px;
+  .title {
+    padding-top: 150px;
+    color: white;
+    h1 {
+      font-size: 51.3px;
+      margin: 0px 0px 25px;
+    }
+    p {
+      font-size: $myFontSize;
+      font-weight: 100;
+    }
+  }
+}
+
+#about {
+  margin-top: 70px;
+  height: 350px;
+  .boxes {
+    @include center1();
+    gap: 100px;
+    .box {
+      width: 316px;
+      height: 222px;
+      @include center2();
+      gap: 30px;
+      p {
+        color: $myColor;
+        font-size: 19.8px;
+      }
+      span {
+        font-size: $myFontSize;
+        color: #9a9a9a;
+      }
+      .more-btn {
+        @extend .more-btn;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #about {
+    .boxes {
+      gap: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    height: auto;
+    .boxes {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about {
+    .boxes {
+      .box {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+#card_area {
+  height: 680px;
+  background-color: $myColor;
+  .card_title {
+    text-align: center;
+    padding: 70px 0px 40px 0px;
+    h1 {
+      font-size: 40.3px;
+      color: white;
+    }
+    span {
+      font-size: $myFontSize;
+      color: honeydew;
+    }
+  }
+  .cards {
+    display: flex;
+    gap: 70px;
+  }
+  .card {
+    margin-top: 50px;
+    width: 237px;
+    height: 333px;
+    @include center2();
+    align-items: center;
+    border: 0.2px solid rgb(234, 234, 234);
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 0px 0px 25px;
+    }
+    h1 {
+      font-size: 19.8px;
+      color: white;
+    }
+    span {
+      font-size: $myFontSize;
+      color: #bacee6;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #card_area {
+    height: auto;
+    .cards {
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #card_area {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    .card {
+      width: 80%;
+      height: auto;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #card_area {
+    .card_title {
+      h1 {
+        font-size: 30px;
+      }
+    }
+    .cards {
+      .card {
+        width: 90%;
+      }
+    }
+  }
+}
+
+
+#card_area2 {
+  height: 680px;
+  .card_area2_title {
+    text-align: center;
+    padding: 70px 0px 20px 0px;
+    h1 {
+      font-size: 40.3px;
+      color: $myColor;
+    }
+    span {
+      font-size: $myFontSize;
+    }
+  }
+  .card_boxes {
+    @include center();
+    justify-content: space-between;
+  }
+  .card_box {
+    @include center2();
+    width: 531px;
+    height: 403px;
+    margin-top: 60px;
+    img {
+      width: 531px;
+      height: 180px;
+      margin-bottom: 30px;
+    }
+    .card_content {
+      @include center2();
+      gap: 20px;
+      h1 {
+        font-size: 19.8px;
+        color: $myColor;
+      }
+      p {
+        font-size: $myFontSize;
+      }
+      .more-btn {
+        @extend .more-btn;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #card_area2 {
+    height: auto;
+    .card_boxes {
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+    .card_box {
+      width: 90%;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #card_area2 {
+    .card_boxes {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    .card_box {
+      width: 95%;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #card_area2 {
+    .card_area2_title {
+      h1 {
+        font-size: 30px;
+      }
+    }
+    .card_boxes {
+      .card_box {
+        width: 100%;
+        padding: 15px;
+        img {
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+
+
+#footer_area {
+  height: 150px;
+  .icon_box {
+    border-top: 1px solid rgb(204, 199, 199);
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+    .fa-brands {
+      color: $myColor;
+    }
+  }
+  p {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 11.7px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer_area {
+    height: auto;
+    .icon_box {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    p {
+      padding-top: 20px;
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #footer_area {
+    .icon_box {
+      gap: 10px;
+    }
+    p {
+      font-size: 9px;
+    }
+  }
+}
+
