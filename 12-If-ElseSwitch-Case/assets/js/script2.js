@@ -1,7 +1,7 @@
-let moon = prompt("Enter season:\nSpring\nWinter\nSummer\nAutumn");
+let moon = prompt("Enter season:\n1-Spring\n2-Winter\n3-Summer\n4-Autumn");
 
 switch (moon) {
-    case Spring:
+    case 1:
         alert("March, April, May");
         break;
     case 2:
