@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let username = usernameInput.value;
         let password = passwordInput.value;
 
-        // 7) Format yoxlaması
         let usernameOk = username.length >= 3 && username.length <= 20;
         let passwordOk = password.length >= 8;
 
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // 9) Müvəqqəti bloklanma yoxlaması
         let currentTime = Date.now();
         let userAttempts = loginAttempts[username] || { count: 0, blockedUntil: 0 };
 
@@ -35,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // İstifadəçini yoxla
         let userFound = false;
         for (let i = 0; i < users.length; i++) {
             if ((users[i].username === username || users[i].email === username) && users[i].password === password) {
@@ -43,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.setItem("users", JSON.stringify(users));
                 sweetToast("Uğurla daxil oldunuz!");
 
-                // Cəhdləri sıfırla
                 loginAttempts[username] = { count: 0, blockedUntil: 0 };
                 localStorage.setItem("loginAttempts", JSON.stringify(loginAttempts));
 
@@ -56,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (!userFound) {
-            // Yanlış giriş üçün məlumatları yenilə
             if (!loginAttempts[username]) {
                 loginAttempts[username] = { count: 1, blockedUntil: 0 };
             } else {

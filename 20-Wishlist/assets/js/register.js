@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let confirmPassword = document.querySelector("#confirmpassword");
     let passwordCheck = document.querySelector("#passwordCheck");
 
-    // Şifrə güclü olduqda ✅ və ya ❌ göstər
     password.addEventListener("input", () => {
         if (isStrongPassword(password.value)) {
             passwordCheck.textContent = "✅";
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Username yoxlaması
     function isValidUsername(username) {
         if (username.length < 3 || username.length > 20) return false;
 
@@ -34,14 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return true;
     }
 
-    // Email yoxlaması
     function isValidEmail(email) {
         const atIndex = email.indexOf("@");
         const dotIndex = email.lastIndexOf(".");
         return atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1;
     }
 
-    // Güclü şifrə yoxlaması
     function isStrongPassword(password) {
         if (password.length < 8) return false;
 
@@ -57,12 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return hasUpper && hasLower && hasNumber && hasSpecial;
     }
 
-    // Form inputlara icon əlavə et
     function addValidationIcon(inputElement, isValid) {
         inputElement.style.borderColor = isValid ? "green" : "red";
     }
 
-    // Validation input zamanı
     username.addEventListener("input", () => {
         addValidationIcon(username, isValidUsername(username.value));
     });
