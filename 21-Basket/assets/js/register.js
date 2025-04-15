@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
             isLogined: false,
             id: uuidv4(),
             wishlist: [],
+            basket: [],
         };
 
         users.push(newUser);
