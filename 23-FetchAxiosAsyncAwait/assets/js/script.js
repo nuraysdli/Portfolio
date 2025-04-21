@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let userBtn = document.querySelector(".username")
     userBtn.textContent = currentUser?.username;
 
-    let basket = currentUser.basket;
+    let basket = currentUser.basket || [];
 
     let login = document.querySelector(".login");
     let register = document.querySelector(".register");

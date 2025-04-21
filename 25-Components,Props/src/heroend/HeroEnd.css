@@ -1,0 +1,29 @@
+#hero-end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+    background-color: blueviolet;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-end{
+    align-items: center;
+    text-align: center;
+}
+
+.hero-end h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hero-end p{
+    font-size: 16px;
+    font-weight: 300;
+}

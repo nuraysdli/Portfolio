@@ -1,0 +1,68 @@
+#main-icons{
+    background-color: rgb(12, 140, 140);
+    height: 55vh;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    height: 50vh;
+}
+
+.main-icon-title h5{
+    font-size: 16px;
+    color: rgb(200, 148, 7);
+    text-transform: uppercase;
+}
+
+.main-icon-title h1{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.main-icon-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.icon{
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    color: rgb(12, 140, 140);
+    padding: 30px;
+}
+
+.icon-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box h3{
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+}
+
+.icon-box span{
+    font-size: 16px;
+    color: rgba(240, 248, 255, 0.786);
+}
+
+

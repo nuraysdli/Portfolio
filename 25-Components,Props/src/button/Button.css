@@ -1,0 +1,44 @@
+.find-btn{
+    width: 200px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: #1D809F;
+    cursor: pointer;
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+.find-btn:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+.offer-btn{
+    width: 200px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: #000;
+    cursor: pointer;
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+.offer-btn:hover{
+    background-color: rgb(174, 171, 171);
+    color: black;
+}
+
+.click{
+    width: 200px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-color: white;
+    cursor: pointer;
+    color: #000;
+}
+
+.click:hover{
+    background-color: #000;
+    color: rgb(174, 171, 171);
+}

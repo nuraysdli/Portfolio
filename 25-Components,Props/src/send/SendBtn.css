@@ -1,0 +1,26 @@
+#send-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40vh;
+    background-color: rgb(93, 60, 60);
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.send-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.send-btn h1{
+    font-size: 32px;
+    color: white;
+}
