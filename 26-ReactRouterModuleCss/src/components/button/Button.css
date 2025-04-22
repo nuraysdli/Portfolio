@@ -1,0 +1,46 @@
+.started-btn{
+    width: 180px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: blue;
+    cursor: pointer;
+    color: aliceblue;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.started-btn:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+.learn-btn{
+    width: 180px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: #212529;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+}
+
+.learn-btn:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+.plan-btn{
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid #0d6efd;
+    background-color: white;
+    cursor: pointer;
+    color: #0d6efd;
+    margin-top: 10px;
+}
+
+.plan-btn:hover{
+    background-color: #0d6efd;
+    color: aliceblue;
+}

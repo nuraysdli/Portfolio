@@ -1,0 +1,52 @@
+#cardhero{
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.cards-hero h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.text{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.card{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content{
+    width: 350px;
+    height: 450px;
+    border: 1px solid rgb(176, 175, 175);
+    border-radius: 5px;
+    background-color: white;
+    padding: 30px 40px;
+}
+
+.title{
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.price{
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.card-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
