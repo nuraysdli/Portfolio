@@ -1,0 +1,134 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .todo-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 0 15px;
+  }
+  
+  .todo-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  
+  .todo-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .todo-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .add-btn, .clear-all {
+    padding: 10px 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .add-btn {
+    background-color: #007bff;
+  }
+  
+  .clear-all {
+    background-color: #dc3545;
+  }
+  
+  .todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+  }
+  
+  .not-done {
+    background-color: #fff0f0;
+  }
+  
+  .done {
+    background-color: #e0ffe0;
+  }
+  
+  .task-text {
+    flex: 1;
+    font-size: 18px;
+  }
+  
+  .line-through {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .edit-input {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid #a3d5ff;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .delete-btn, .edit-btn, .done-btn, .save-btn {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+  }
+  
+  .edit-btn {
+    background-color: #0dcaf0;
+  }
+  
+  .done-btn {
+    background-color: #198754;
+  }
+  
+  .save-btn {
+    background-color: #ffc107;
+  }
+  
+  .task-index {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
