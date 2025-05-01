@@ -1,3 +1,14 @@
 {
-    "users": []
+  "users": [
+    {
+      "id": "b368",
+      "name": "Nuray",
+      "surname": "Asadli",
+      "username": "nuraysdli",
+      "email": "nurayesedli@gmail.com",
+      "password": "Nuray2005!",
+      "confirmpassword": "Nuray2005!",
+      "isLogined": true
+    }
+  ]
 }

@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
-  let baseUrl = "http://localhost:3000/users";
+  let baseUrl = "http://localhost:3001/users";
   const navigate = useNavigate();
 
   const {
@@ -42,7 +42,7 @@ const Register = () => {
           resetForm();
           toast.success("User registered successfully");
           setTimeout(() => {
-            navigate("/login");
+            navigate("/Login");
           }, 2000);
         } else {
           toast.error("User already exists");
