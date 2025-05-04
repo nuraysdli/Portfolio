@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  let baseUrl = "http://localhost:3001/users";
+  let baseUrl = "http://localhost:3000/users";
   const navigate = useNavigate();
 
   const { values, handleChange, handleSubmit, errors, resetForm } = useFormik({

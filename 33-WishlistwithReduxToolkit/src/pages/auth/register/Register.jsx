@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
-  let baseUrl = "http://localhost:3001/users";
+  let baseUrl = "http://localhost:3000/users";
   const navigate = useNavigate();
 
   const {

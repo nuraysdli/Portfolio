@@ -7,6 +7,7 @@ import Contact from "../pages/Contact";
 import NotFoundPage from "../pages/NotFoundPage";
 import Register from "../pages/auth/register/Register";
 import Login from "../pages/auth/login/Login";
+import Wishlist from "../pages/Wishlist";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
       },
     ],
   },
