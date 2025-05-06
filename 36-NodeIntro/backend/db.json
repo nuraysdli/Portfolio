@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "name": "Aysel Huseynova",
+      "age": 22,
+      "email": "aysel.huseynova@example.com",
+      "major": "Economics"
+    },
+    {
+      "id": 3,
+      "name": "Kamran Quliyev",
+      "age": 19,
+      "email": "kamran.quliyev@example.com",
+      "major": "Mathematics"
+    }
+  ]
+}
