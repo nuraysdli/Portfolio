@@ -1,0 +1,13 @@
+.setting{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.add-btn{
+    margin-bottom: 15px;
+}
