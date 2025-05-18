@@ -1,19 +1,18 @@
-import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
-import Person2Icon from "@mui/icons-material/Person2";
 import { Link } from "react-router-dom";
+import PersonIcon from "@mui/icons-material/Person";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Dropdown() {
   let baseUrl = "http://localhost:3000/users";
-
-  const [existUser, setExistUser] = React.useState([]);
+  const [existUser, setExistUser] = useState("");
 
   const getUsers = async () => {
-    let { data } = await axios.get(baseUrl);
+    let { data } = await axios(baseUrl);
     let isLoginedUser = data.find((user) => user.isLogined == true);
     setExistUser(isLoginedUser);
   };
@@ -24,13 +23,13 @@ export default function Dropdown() {
         ...existUser,
         isLogined: false,
       });
-
-      setExistUser(null);
     }
+    setExistUser(null);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     getUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -40,11 +39,14 @@ export default function Dropdown() {
           <Button
             variant="outlined"
             {...bindTrigger(popupState)}
-            startIcon={<Person2Icon />}
-            style={{ textTransform: "capitalize" }}
-            size="small"
+            startIcon={<PersonIcon />}
+            style={{
+              textTransform: "capitalize",
+              color: "black",
+              borderColor: "black",
+            }}
           >
-            {existUser ? existUser.username : "Profile"}
+            {existUser?.username ?? "Profile"}
           </Button>
           <Menu {...bindMenu(popupState)}>
             {existUser ? (
@@ -59,10 +61,10 @@ export default function Dropdown() {
             ) : (
               <div>
                 <MenuItem onClick={popupState.close}>
-                  <Link to={"/Register"}>Register</Link>
+                  <Link to={"/register"}>Register</Link>
                 </MenuItem>
                 <MenuItem onClick={popupState.close}>
-                  <Link to={"/Login"}>Login</Link>
+                  <Link to={"/login"}>Login</Link>
                 </MenuItem>
               </div>
             )}

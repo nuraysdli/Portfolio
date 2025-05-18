@@ -1,38 +1,52 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { addBasket } from "../../redux/features/basketSlice";
+
+
+import "./Product.css";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { updateWishlist } from "../../redux/features/wishlistSlice";
+
 
 const Product = ({ product }) => {
   let { wishlist } = useSelector((state) => state.wishlist);
   let dispatch = useDispatch();
 
+  let navigate=useNavigate()
+
   let existProduct = wishlist.find((item) => item.id == product.id);
+
   return (
-    <div className="col-3">
-      <Card style={{ width: "18rem", padding: "10px", position: "relative" }}>
-        <FaHeart
-          style={{
-            position: "absolute",
-            right: "10px",
-            cursor: "pointer",
-            color: existProduct ? "red" : "black",
-          }}
-          onClick={() => dispatch(updateWishlist(product))}
-        />
-        <Card.Img
-          variant="top"
-          src={product.image}
-          style={{ height: "18rem", padding: "10px" }}
-        />
+    <div className="col-sm-6 col-md-4 col-lg-3"  onClick={()=>navigate(`/productdetail/${product.id}`)}>
+      <Card className="card">
+        {existProduct ? (
+          <FaHeart
+            className="icon"
+            size={23}
+            onClick={(e) =>{e.stopPropagation(),dispatch(updateWishlist(product))}}
+            style={{ color: "black" }}
+          />
+        ) : (
+          <FaRegHeart
+            className="icon"
+            size={23}
+            onClick={(e) =>{e.stopPropagation(),dispatch(updateWishlist(product))}}
+            style={{ color: "black" }}
+          />
+        )}
+
+        <Card.Img className="card_img" variant="top" src={product.image} />
         <Card.Body>
-          <Card.Title>{`${product.title.slice(0, 13)}`}...</Card.Title>
-          <Card.Text>${product.price}</Card.Text>
-          <Button variant="primary" style={{ width: "100%" }}>
-            Add Basket
-          </Button>
+          <Card.Title className="card_title">
+            {product.title.slice(0, 20)}
+          </Card.Title>
+          <Card.Text className="price">${product.price}</Card.Text>
+          <Button variant="primary"  onClick={(e) =>{e.stopPropagation(),dispatch(addBasket(product))}}>
+  Add Basket
+</Button>
         </Card.Body>
       </Card>
     </div>

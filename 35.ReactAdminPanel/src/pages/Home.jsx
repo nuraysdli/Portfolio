@@ -13,13 +13,11 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className="container">
-      <div className="row" style={{ gap: "20px 0" }}>
-        {products &&
-          products.map((product) => (
-            <Product key={product.id} product={product} />
-          ))}
+    <div>
+      <div className="row" style={{gap:"20px 0"}}>
+      {products && products.map((product) => <Product key={product.id} product={product}/>)}
       </div>
+      
     </div>
   );
 };

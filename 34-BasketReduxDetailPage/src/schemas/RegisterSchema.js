@@ -1,16 +1,18 @@
 import * as yup from "yup";
 
-export let registerschema = yup.object().shape({
-    name: yup.string().min(3).required(),
-    surname: yup.string().min(5).required(),
-    username: yup.string().required().lowercase().trim(),
-    email: yup.string().required().email(),
-    password: yup
+export const registerschema = yup.object().shape({
+  name: yup.string().min(3).required(),
+  username: yup.string().required(),
+  email: yup.string().email().required(),
+  password: yup
     .string()
     .required()
     .matches(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-        "Must contain 8 characters"
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,}$/,
+      "Password must be at least 8 characters and include uppercase, lowercase, number, and special character"
     ),
-    confirmpassword: yup.string().required().oneOf([yup.ref("password"), null], "Passwords must match"),
+  confirmpassword: yup
+    .string()
+    .oneOf([yup.ref("password"), null], "Passwords must match")
+    .required("Confirm password is required"),
 });

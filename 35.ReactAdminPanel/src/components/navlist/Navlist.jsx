@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navlist.css";
+import "./Navlist.css"
 
 const Navlist = () => {
   return (
@@ -13,6 +13,9 @@ const Navlist = () => {
       </li>
       <li className="list_item">
         <Link to={"/contact"}>Contact</Link>
+      </li>
+      <li className="list_item">
+        <Link to={"/admin"}>Admin</Link>
       </li>
     </ul>
   );

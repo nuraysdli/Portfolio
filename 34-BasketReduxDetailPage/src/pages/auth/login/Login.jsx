@@ -1,22 +1,19 @@
-import axios from "axios";
 import { useFormik } from "formik";
-import React from "react";
+import axios from "axios";
 import "./Login.css";
-import { loginschema } from "../../../schemas/LoginSchema";
 import { Link, useNavigate } from "react-router-dom";
+import { loginschema } from "../../../schemas/LoginSchema";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  let baseUrl = "http://localhost:3000/users";
   const navigate = useNavigate();
-
+  const baseUrl = "http://localhost:3000/users";
   const { values, handleChange, handleSubmit, errors, resetForm } = useFormik({
     initialValues: {
       username: "",
       password: "",
     },
-
-    onSubmit: async (values) => {
+    onSubmit: async () => {
       const { data } = await axios(baseUrl);
 
       let existUser = data.find(
@@ -24,63 +21,71 @@ const Login = () => {
       );
 
       if (existUser) {
-        await axios.put(`${baseUrl}/${existUser.id}`, {
-          ...existUser,
-          isLogined: true,
-        });
+        await axios.put(`${baseUrl}/${existUser.id}`, { ...existUser, isLogined: true });
+        toast.success("Logined successfully!")
         resetForm();
-        toast.success("User register successfully");
         setTimeout(() => {
           navigate("/");
         }, 3000);
-      } else {
-        toast.error("User not found");
+      } else{
+        toast.error("User not found")
       }
-
-      validationSchema: loginschema;
     },
+    validationSchema: loginschema,
   });
 
   const { username, password } = values;
 
   return (
-    <div className="login-container">
-      <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Login</h2>
-        <div>
-          <div className="label-container">
-            <label htmlFor="username">Username</label>
-            {errors ? <span className="error">{errors.username}</span> : null}
+    <div className="login">
+      <div className="login-form">
+        <form onSubmit={handleSubmit} className="form">
+          <div className="form-group">
+            <label htmlFor="username" className="form-label">
+              Username
+            </label>
+            {errors.username && (
+              <span className="error">{errors.username}</span>
+            )}
+            <input
+              type="text"
+              id="username"
+              name="username"
+              className="form-input"
+              value={username}
+              onChange={handleChange}
+              placeholder="Your username"
+            />
           </div>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <div className="label-container">
-            <label htmlFor="password">Password</label>
-            {errors ? <span className="error">{errors.password}</span> : null}
+
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            {errors.password && (
+              <span className="error">{errors.password}</span>
+            )}
+            <input
+              type="password"
+              id="password"
+              name="password"
+              className="form-input"
+              value={password}
+              onChange={handleChange}
+              placeholder="Your password"
+            />
           </div>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </div>
-        <p>
-          Don't have an account?
-          <Link style={{ color: "blue" }} to={"/register"}>
-            Sign Up
-          </Link>
-        </p>
-        <button className="login-btn" type="submit">
-          Sign In
-        </button>
-      </form>
+          <p style={{ marginBottom: "8px" }}>
+            Don't have an account?{" "}
+            <Link style={{ color: "blue" }} to={"/register"}>
+              Sign Up
+            </Link>
+          </p>
+          <button type="submit" className="form-button">
+            Sign in
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import * as yup from "yup";
+import * as yup from 'yup';
 
-export let loginschema = yup.object().shape({
-    username: yup.string().required().lowercase().trim(),
-    password: yup.string().required()
+export const loginschema = yup.object().shape({
+  username: yup.string().required('').lowercase().trim(),
+  password: yup.string().required(''),
 });

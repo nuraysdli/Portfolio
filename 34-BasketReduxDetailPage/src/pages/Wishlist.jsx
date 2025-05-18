@@ -1,16 +1,21 @@
 import React from "react";
+import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import Table from "react-bootstrap/Table";
-import { Button } from "react-bootstrap";
-import { clearWishlist, updateWishlist } from "../redux/features/wishlistSlice";
+import Button from "react-bootstrap/Button";
+import { updateWishlist,clearWishlist } from "../redux/features/wishlistSlice";
 
 const Wishlist = () => {
   let { wishlist } = useSelector((state) => state.wishlist);
   let dispatch = useDispatch();
 
+  const handleClearWishlist = () => {
+    dispatch(clearWishlist());
+  };
+
   return (
     <div>
-      <Table striped bordered hover>
+      {" "}
+      <Table bordered>
         <thead>
           <tr>
             <th>Image</th>
@@ -26,7 +31,8 @@ const Wishlist = () => {
                 <td>
                   <img
                     src={product.image}
-                    style={{ width: "130px", height: "90px" }}
+                    alt=""
+                    style={{ width: "100px", height: "90px" }}
                   />
                 </td>
                 <td>{product.title}</td>
@@ -34,6 +40,7 @@ const Wishlist = () => {
                 <td>
                   <Button
                     variant="danger"
+                    style={{ width: "80px" }}
                     onClick={() => dispatch(updateWishlist(product))}
                   >
                     Remove
@@ -43,11 +50,13 @@ const Wishlist = () => {
             ))}
         </tbody>
       </Table>
-      {wishlist.length > 0 && (
-        <Button variant="danger" onClick={() => dispatch(clearWishlist())}>
-          Remove All
-        </Button>
-      )}
+      <Button
+        variant="danger"
+        onClick={handleClearWishlist}
+        style={{ marginBottom: "20px",width:"100px" }}
+      >
+        Clear All
+      </Button>
     </div>
   );
 };
